@@ -1,0 +1,62 @@
+[
+  {
+    "requirement_id": "REQ-HAZ-001A",
+    "description": "Conduct hazard analysis",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001C",
+    "description": "Identify reasonably foreseeable hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001F",
+    "description": "Hazard analysis must be written",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002A",
+    "description": "Biological hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002D",
+    "description": "Occur naturally",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002F",
+    "description": "Intentionally introduced for economic gain",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003B",
+    "description": "Assess severity and probability of hazard occurrence",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003C",
+    "description": "Evaluate environmental pathogens for ready-to-eat foods",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003G",
+    "description": "Raw materials and other ingredients",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003M",
+    "description": "Sanitation, including employee hygiene",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  }
+]

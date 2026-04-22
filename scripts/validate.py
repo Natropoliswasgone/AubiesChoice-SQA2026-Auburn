@@ -2,10 +2,10 @@ import json
 import sys
 
 # Load requirements and expected structure
-with open("requirements.json") as f:
+with open("Input CFR File/output.json") as f:
     requirements = json.load(f)
 
-with open("expected_structure.json") as f:
+with open("Input CFR File/expected_structure.json") as f:
     expected_structure = json.load(f)
 
 # Build set of actual requirement IDs

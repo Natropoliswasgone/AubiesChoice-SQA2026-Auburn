@@ -6,47 +6,127 @@
   },
   {
     "test_case_id": "TC-002",
+    "requirement_id": "REQ-HAZ-001B",
+    "description": "Verify that the known hazards are identified."
+  },
+  {
+    "test_case_id": "TC-003",
     "requirement_id": "REQ-HAZ-001C",
     "description": "Verify that the reasonably foreseeable hazards are identified."
   },
   {
-    "test_case_id": "TC-003",
+    "test_case_id": "TC-004",
+    "requirement_id": "REQ-HAZ-001D",
+    "description": "Verify that the hazards using data, experience, reports are evaluated."
+  },
+  {
+    "test_case_id": "TC-005",
+    "requirement_id": "REQ-HAZ-001E",
+    "description": "Verify that the hazards requiring preventive controls are determined."
+  },
+  {
+    "test_case_id": "TC-006",
     "requirement_id": "REQ-HAZ-001F",
     "description": "Verify that the hazard analysis is written."
   },
   {
-    "test_case_id": "TC-004",
+    "test_case_id": "TC-007",
     "requirement_id": "REQ-HAZ-002A",
     "description": "Verify that biological hazards are identified and evaluated."
   },
   {
-    "test_case_id": "TC-005",
+    "test_case_id": "TC-008",
+    "requirement_id": "REQ-HAZ-002B",
+    "description": "Verify that chemical hazards are identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-009",
+    "requirement_id": "REQ-HAZ-002C",
+    "description": "Verify that physical hazards are identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-010",
     "requirement_id": "REQ-HAZ-002D",
     "description": "Verify that hazards that occur naturally are identified and documented."
   },
   {
-    "test_case_id": "TC-006",
+    "test_case_id": "TC-011",
+    "requirement_id": "REQ-HAZ-002E",
+    "description": "Verify that unintentionally introduced is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-012",
     "requirement_id": "REQ-HAZ-002F",
     "description": "Verify that intentionally introduced for economic gain is identified and evaluated."
   },
   {
-    "test_case_id": "TC-007",
+    "test_case_id": "TC-013",
+    "requirement_id": "REQ-HAZ-003A",
+    "description": "Verify that the identified hazards are evaluated."
+  },
+  {
+    "test_case_id": "TC-014",
     "requirement_id": "REQ-HAZ-003B",
     "description": "Verify that the severity and probability of hazard occurrence is assessed."
   },
   {
-    "test_case_id": "TC-008",
+    "test_case_id": "TC-015",
     "requirement_id": "REQ-HAZ-003C",
     "description": "Verify that the environmental pathogens for ready-to-eat foods are evaluated."
   },
   {
-    "test_case_id": "TC-009",
+    "test_case_id": "TC-016",
+    "requirement_id": "REQ-HAZ-003D",
+    "description": "Verify that the effects on safety of finished food is considered."
+  },
+  {
+    "test_case_id": "TC-017",
+    "requirement_id": "REQ-HAZ-003E",
+    "description": "Verify that formulation of the food is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-018",
+    "requirement_id": "REQ-HAZ-003F",
+    "description": "Verify that facility and equipment condition, function, design is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-019",
     "requirement_id": "REQ-HAZ-003G",
     "description": "Verify that raw materials and other ingredients are identified and evaluated."
   },
   {
-    "test_case_id": "TC-010",
+    "test_case_id": "TC-020",
+    "requirement_id": "REQ-HAZ-003H",
+    "description": "Verify that transportation practices are identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-021",
+    "requirement_id": "REQ-HAZ-003I",
+    "description": "Verify that manufacturing/processing procedures are identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-022",
+    "requirement_id": "REQ-HAZ-003J",
+    "description": "Verify that packaging and labeling activities are identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-023",
+    "requirement_id": "REQ-HAZ-003K",
+    "description": "Verify that storage and distribution is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-024",
+    "requirement_id": "REQ-HAZ-003L",
+    "description": "Verify that intended or reasonably foreseeable use is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-025",
     "requirement_id": "REQ-HAZ-003M",
     "description": "Verify that sanitation, including employee hygiene is identified and evaluated."
+  },
+  {
+    "test_case_id": "TC-026",
+    "requirement_id": "REQ-HAZ-003N",
+    "description": "Verify that any other relevant factors (e.g., temporal/natural toxins) are identified and evaluated."
   }
 ]

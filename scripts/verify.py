@@ -14,10 +14,10 @@ Rules:
 5. Parent-child ID consistency (child must start with parent ID)
 """
 
-with open("requirements.json") as f:
+with open("Input CFR File/requirements.json") as f:
     requirements = json.load(f)
 
-with open("test_cases.json") as f:
+with open("Input CFR File/test_cases.json") as f:
     test_cases = json.load(f)
 
 test_ids = {t["requirement_id"] for t in test_cases}

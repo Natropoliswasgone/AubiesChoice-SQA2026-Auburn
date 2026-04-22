@@ -1,0 +1,158 @@
+[
+  {
+    "requirement_id": "REQ-HAZ-001A",
+    "description": "Conduct hazard analysis",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001B",
+    "description": "Identify known hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001C",
+    "description": "Identify reasonably foreseeable hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001D",
+    "description": "Evaluate hazards using data, experience, reports",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001E",
+    "description": "Determine hazards requiring preventive controls",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-001F",
+    "description": "Hazard analysis must be written",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-001"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002A",
+    "description": "Biological hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002B",
+    "description": "Chemical hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002C",
+    "description": "Physical hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002D",
+    "description": "Occur naturally",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002E",
+    "description": "Unintentionally introduced",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-002F",
+    "description": "Intentionally introduced for economic gain",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-002"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003A",
+    "description": "Evaluate identified hazards",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003B",
+    "description": "Assess severity and probability of hazard occurrence",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003C",
+    "description": "Evaluate environmental pathogens for ready-to-eat foods",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003D",
+    "description": "Consider effects on safety of finished food",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003E",
+    "description": "Formulation of the food",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003F",
+    "description": "Facility and equipment condition, function, design",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003G",
+    "description": "Raw materials and other ingredients",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003H",
+    "description": "Transportation practices",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003I",
+    "description": "Manufacturing/processing procedures",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003J",
+    "description": "Packaging and labeling activities",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003K",
+    "description": "Storage and distribution",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003L",
+    "description": "Intended or reasonably foreseeable use",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003M",
+    "description": "Sanitation, including employee hygiene",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  },
+  {
+    "requirement_id": "REQ-HAZ-003N",
+    "description": "Any other relevant factors (e.g., temporal/natural toxins)",
+    "source": "21 CFR 117.130",
+    "parent": "REQ-HAZ-003"
+  }
+]

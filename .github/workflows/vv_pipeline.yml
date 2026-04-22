@@ -1,13 +1,5 @@
 # .github/workflows/vv_pipeline.yml
 # CFR §117.130 V&V Pipeline with Forensick Audit Trail
-# ─────────────────────────────────────────────────────────────────────────────
-# Runs on every push and pull-request to main.
-# All five forensick integration points fire during this workflow:
-#   1. REQUIREMENT_SKIPPED  → generate step (--select filter)
-#   2. REQUIREMENT_MISSING  → verify step (Rule 1)
-#   3. TEST_COVERAGE_GAP    → verify step (Rule 3)
-#   4. ID_FORMAT_VIOLATION  → verify step (Rule 2)
-#   5. CI_BUILD_RESULT      → verify step (exit summary)
 
 name: CFR V&V Pipeline
 
@@ -23,23 +15,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1. Checkout ─────────────────────────────────────────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ── 2. Python setup ─────────────────────────────────────────────────────
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # ── 3. Generate requirements (fires Integration Point 1: SKIPPED) ───────
       - name: Generate requirements.json
         run: |
-          python generate_requirements_v2.py \
-            -i "CFR-117.130.md" \
-            -o requirements.json \
-            -s expected_structure.json \
+          python scripts/generate_requirements.py \
+            -i "Input CFR File/CFR-117.130.md" \
+            -o "Input CFR File/requirements.json" \
+            -s "Input CFR File/expected_structure.json" \
             -c "21 CFR 117.130" \
             -k HAZ \
             --select \
@@ -47,49 +36,35 @@ jobs:
               REQ-HAZ-002A REQ-HAZ-002D REQ-HAZ-002F \
               REQ-HAZ-003B REQ-HAZ-003C \
               REQ-HAZ-003G REQ-HAZ-003M
-        # forensick fires: REQUIREMENT_SKIPPED for the 16 unselected requirements
 
-      # ── 4. Generate test cases ───────────────────────────────────────────────
       - name: Generate test_cases.json
         run: |
-          python generate_test_cases.py \
-            -r requirements.json \
-            -s expected_structure.json \
-            -o test_cases.json \
+          python scripts/generate_test_cases.py \
+            -r "Input CFR File/requirements.json" \
+            -s "Input CFR File/expected_structure.json" \
+            -o "Input CFR File/test_cases.json" \
             --select \
               REQ-HAZ-001A REQ-HAZ-001C REQ-HAZ-001F \
               REQ-HAZ-002A REQ-HAZ-002D REQ-HAZ-002F \
               REQ-HAZ-003B REQ-HAZ-003C \
               REQ-HAZ-003G REQ-HAZ-003M
 
-      # ── 5. Verify (fires Integration Points 2, 3, 4, 5) ────────────────────
       - name: Run verify.py
         id: verify
-        run: python verify.py
-        # verify.py calls:
-        #   forensick.log_requirement_missing   (Rule 1 failures)
-        #   forensick.log_id_format_violation   (Rule 2 failures)
-        #   forensick.log_test_coverage_gap     (Rule 3 failures)
-        #   forensick.log_ci_build_result       (final pass/fail)
+        run: python scripts/verify.py
 
-      # ── 6. Upload forensick audit log as CI artifact ─────────────────────────
-      #    Preserved for 90 days; downloadable from the Actions tab.
-      #    Provides a permanent, tamper-evident audit trail for each build.
       - name: Upload forensick audit log
-        if: always()    # upload even on failure so failures are captured
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: forensick-audit-log-${{ github.run_number }}
           path: forensick_log.jsonl
           retention-days: 90
 
-      # ── 7. Print forensick summary in CI log ────────────────────────────────
       - name: Print forensick summary
         if: always()
-        run: python forensick.py
-        # Prints grouped event count table to the Actions log
+        run: python scripts/forensick.py
 
-      # ── 8. Fail the build if verify.py returned non-zero ────────────────────
       - name: Assert build status
         if: failure()
         run: |

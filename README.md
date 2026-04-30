@@ -85,10 +85,8 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
    ```
 
 3. **Install dependencies**
-   ```bash
-   pip install <package-name>
-   ```
-   > Check the imports at the top of each script in `scripts/` and install any third-party packages listed there.
+
+   No third-party packages are required. All scripts use Python built-in libraries only (`json`, `re`, `argparse`, `os`, `sys`, etc.).
 
 4. **Run the pipeline scripts in order**
    ```bash
@@ -123,10 +121,8 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
    > `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 3. **Install dependencies**
-   ```bash
-   pip install <package-name>
-   ```
-   > Check the imports at the top of each script in `scripts/` and install any third-party packages listed there.
+
+   No third-party packages are required. All scripts use Python built-in libraries only (`json`, `re`, `argparse`, `os`, `sys`, etc.).
 
 4. **Run the pipeline scripts in order**
    ```bash
@@ -176,6 +172,15 @@ Each model was evaluated based on:
 - **Coverage** – Did it generate test cases for all requirements?
 - **Correctness** – Does each test case match its requirement?
 - **Completeness** – Are all required fields present?
+
+---
+
+## Deliverables
+
+- GitHub repository with all scripts and outputs
+- Group report summarizing approach and findings
+- Screenshots/logs of CI pipeline and validation checks
+- Individual LLM comparison report (submitted on Canvas)
 
 ---
 

@@ -1,32 +1,34 @@
 # CFR V&V Project
+**21 CFR Atomic Rules | SQA 2026 – Auburn University**
 
 ## Project Overview
 
-This project implements a Verification & Validation (V&V) pipeline for regulatory requirements extracted from the Code of Federal Regulations (CFR). Specifically, it parses **CFR § 117.130**, extracts structured atomic requirements, generates test cases for those requirements, and runs automated verification and validation checks — all orchestrated through a CI/CD pipeline via GitHub Actions.
+This project implements a Verification & Validation (V&V) pipeline for regulatory requirements extracted from the Code of Federal Regulations (CFR). We parse **CFR § 117.130**, extract structured atomic requirements, generate test cases, and validate correctness using automated scripts and GitHub Actions.
 
 The goal is to ensure that regulatory text can be systematically decomposed, tested, and audited for correctness and completeness in a reproducible way.
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```
 .
-├── .github/                  # GitHub Actions workflow
+├── .github/
+│   └── vv_pipeline.yml           # GitHub Actions CI/CD pipeline
 ├── Input CFR File/
-│   ├── CFR-117.130.md         # Original CFR section (input)
+│   ├── CFR-117.130.md            # Original CFR section (input)
 │   ├── expected_structure.json
 │   ├── output.json
 │   ├── requirements.json
 │   └── test_cases.json
-├── Pictures/                 # Screenshots and supporting images
+├── Pictures/                     # Screenshots and supporting images
 ├── scripts/
 │   ├── generate_requirements_v2.py
 │   ├── generate_test_cases.py
 │   ├── verify.py
 │   ├── validate.py
 │   └── forensick.py
-├── venv/                     # Python virtual environment (not committed)
+├── venv/                         # Python virtual environment (not committed)
 ├── .gitignore
 ├── forensick_log.jsonl
 ├── GroupReport.pdf
@@ -58,12 +60,6 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
 
 ---
 
-## CI/CD Pipeline
-
-`vv_pipeline.yml` is a GitHub Actions workflow that automatically runs verification, validation, and forensick checks on every push to the repository.
-
----
-
 ## Reproducing Locally
 
 ### Prerequisites
@@ -78,8 +74,8 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd <repo-folder>
+   git clone https://github.com/AubiesChoice/AubiesChoice-SQA2026-Auburn.git
+   cd AubiesChoice-SQA2026-Auburn
    ```
 
 2. **Create and activate a virtual environment**
@@ -90,8 +86,9 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
 
 3. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   pip install <package-name>
    ```
+   > Check the imports at the top of each script in `scripts/` and install any third-party packages listed there.
 
 4. **Run the pipeline scripts in order**
    ```bash
@@ -113,8 +110,8 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd <repo-folder>
+   git clone https://github.com/AubiesChoice/AubiesChoice-SQA2026-Auburn.git
+   cd AubiesChoice-SQA2026-Auburn
    ```
 
 2. **Create and activate a virtual environment**
@@ -127,8 +124,9 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
 
 3. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   pip install <package-name>
    ```
+   > Check the imports at the top of each script in `scripts/` and install any third-party packages listed there.
 
 4. **Run the pipeline scripts in order**
    ```bash
@@ -143,6 +141,41 @@ The goal is to ensure that regulatory text can be systematically decomposed, tes
    ```bash
    deactivate
    ```
+
+---
+
+## CI/CD Pipeline
+
+`vv_pipeline.yml` is a GitHub Actions workflow that automatically runs verification, validation, and forensick checks on every push to the repository.
+
+---
+
+## Forensick Integration
+
+Automated checks are implemented for:
+
+- Missing requirements
+- Skipped atomic rules
+- Incomplete test cases
+- CI build failures
+- Invalid structure mappings
+
+These checks run automatically via GitHub Actions on every push.
+
+---
+
+## LLM Testing (Individual Task)
+
+Test cases were generated using:
+
+- **Mistral**
+- **Quantized Mistral**
+
+Each model was evaluated based on:
+
+- **Coverage** – Did it generate test cases for all requirements?
+- **Correctness** – Does each test case match its requirement?
+- **Completeness** – Are all required fields present?
 
 ---
 
